@@ -27,6 +27,12 @@ Resources:
       MemorySize: 128
       Timeout: 100
       Description: A Lambda function that returns a static string.
+      Events:
+        HelloWorldApi:
+          Type: Api
+          Properties:
+            Path: /
+            Method: GET
       Policies:
         # Give Lambda basic execution Permission to the helloFromLambda
         - AWSLambdaBasicExecutionRole
